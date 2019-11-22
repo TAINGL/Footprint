@@ -1,5 +1,5 @@
 <!-- Développement d'une application sur l'empreinte carbone en Flask -->
-
+# Développement d'une application sur l'empreinte carbone en Flask
 Le but de ce projet est dans un premier temps d’apporter une vision plus clair d’un état des lieu sur l’empreinte carbone de la France et de son positionnement par rapport au monde. Et dans une seconde partie de projeter l’évolution idéale pour répondre à la solution choisie qui est d’atteindre la neutralité carbone d’ici 2050 pour répondre à ce besoin urgent sur le réchauffement climatique.
 
 ## Table of Contents
@@ -20,7 +20,8 @@ Le but de ce projet est dans un premier temps d’apporter une vision plus clair
 * [Aide Mémoire](#memo)
 
 
-<!-- ## Présentation du sujet: -->
+<!-- Présentation du sujet: -->
+## Présentation du sujet:
 
 ### L'empreinte carbone:
 - Définition :
@@ -42,7 +43,8 @@ Les principaux GES sont :
 On parlera de GES anthropiques pour les GES dont l'émission est influencée par les activités humaines.
 
 
-<!-- ## Présentation du projet: -->
+<!-- Présentation du projet: -->
+## Présentation du projet:
 
 L'objectif du projet est d'avoir une vision globale sur l’empreinte carbone de la France et de son positionnement par rapport au monde afin de connaitre les axes d'amélioration prioritaire à mettre en place.
 
@@ -55,7 +57,8 @@ Le projet se découpe en deux parties:
 - Avoir la projection de l’évolution jusqu’à 2050 : solution apportée
 
 
-<!--## Cahier des charges -->
+<!-- Cahier des charges -->
+## Cahier des charges
 
 ### 1 - Le contexte
 
@@ -84,7 +87,8 @@ Le but est de pouvoir répondre aux questions suivantes:
 3. L'étendu du projet beaucoup de chose est possible d'entreprendre sur ce projet la difficulté sera de se tenir à des éléments réalisable dans le temps imparti.
 
 
-<!-- ## Modèle conceptuel des données -->
+<!-- Modèle conceptuel des données -->
+## Modèle conceptuel des données
 
 Le MCD est une représentation graphique de haut niveau qui permet facilement de comprendre comment les différents éléments sont liés entre eux à l’aide de diagrammes codifiés dont les éléments suivants font partie :
 
@@ -95,7 +99,8 @@ Le MCD est une représentation graphique de haut niveau qui permet facilement de
 
 MCD réaliser avec MySQL Workbench
 
-<!-- ## Modèle organisationnel des données -->
+<!-- Modèle organisationnel des données -->
+## Modèle organisationnel des données
 
 ```sh
 A compléter
