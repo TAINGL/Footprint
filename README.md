@@ -92,10 +92,10 @@ Le but est de pouvoir répondre aux questions suivantes:
 
 Le MCD est une représentation graphique de haut niveau qui permet facilement de comprendre comment les différents éléments sont liés entre eux à l’aide de diagrammes codifiés dont les éléments suivants font partie :
 
-    Les entités (1 rectangle = 1 objet) ;
-    Les propriétés (la liste des données de l’entité) ;
-    Les relations qui expliquent et précisent comment les entités sont reliées entre elles ;
-    Les cardinalités (les petits chiffres ou icône au niveau des « pattes »).
+* Les entités (1 rectangle = 1 objet) ;
+* Les propriétés (la liste des données de l’entité) ;
+* Les relations qui expliquent et précisent comment les entités sont reliées entre elles ;
+* Les cardinalités (les petits chiffres ou icône au niveau des « pattes »).
 
 MCD réaliser avec MySQL Workbench
 
