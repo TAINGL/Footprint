@@ -9,7 +9,6 @@ from sqlalchemy.schema import ForeignKeyConstraint
 from sqlalchemy.orm import sessionmaker
 from config import FlaskConfig, MySQLConfig
 import migrate.changeset
-#from test import start_alter_table
 
 
 # create an engine
@@ -23,26 +22,14 @@ engine = create_engine(config.SQLALCHEMY_DATABASE_URI)
 meta = MetaData()
 
 
-"""Country_index = Table(
+Country_index = Table(
    'Country_index', meta, 
    Column('Country', VARCHAR(48)), 
    Column('ISO_3', VARCHAR(3),primary_key=True), 
    Column('UN_region', VARCHAR(40)),
    Column('UN_subregion', VARCHAR(30)),
    Column('Data_Quality', VARCHAR(5))
-)"""
-
-Country_index = Table(
-   'Country_index', meta, 
-   Country = Column(VARCHAR(48)), 
-   ISO_3 = Column(VARCHAR(3),primary_key=True), 
-   UN_region = Column(VARCHAR(40)),
-   UN_subregion = Column(VARCHAR(30)),
-   Data_Quality = Column(VARCHAR(5))
 )
-
-# Other properties can be modified as well
-start_alter_table( Country_index, Table)
 
 
 Economy_info = Table(
