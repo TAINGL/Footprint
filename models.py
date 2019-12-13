@@ -3,11 +3,10 @@ import pymysql.cursors
 from config import MySQLConfig, FlaskConfig
 import csv
 import pymysql
-# import tables
 import pandas as pd
+#import tables
 
 # https://pynative.com/python-mysql-database-connection/
-# Connect to the database
 conf = MySQLConfig()
 
 try:
@@ -40,7 +39,7 @@ try:
         from sqlalchemy import create_engine
 
         # read CSV file
-        path = '/Users/Johanna/Documents/SIMPLON/PROJET_FINAL/FLASK/app/file/'
+        path = '/Users/Johanna/Documents/SIMPLON/PROJET_FINAL/FLASK/app/files/'
 
         # Country_index
         Country_table = pd.read_csv(path + 'Country_table.csv', header = 0, index_col=0)
