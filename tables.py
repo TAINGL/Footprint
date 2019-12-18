@@ -17,8 +17,6 @@ engine = create_engine(config.SQLALCHEMY_DATABASE_URI)
 
 # configuration to file db
 conf = MySQLConfig()
-
-engine = create_engine(config.SQLALCHEMY_DATABASE_URI)
 meta = MetaData()
 
 

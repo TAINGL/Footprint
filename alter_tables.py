@@ -10,7 +10,6 @@ engine = create_engine(config.SQLALCHEMY_DATABASE_URI)
 # configuration to file db
 conf = MySQLConfig()
 
-engine = create_engine(config.SQLALCHEMY_DATABASE_URI)
 meta = MetaData()
 
 
@@ -55,10 +54,13 @@ sql_table_4 = """ALTER TABLE National_Footprint
     MODIFY Forest_Land DECIMAL(20,10), 
     MODIFY Fishing_Ground DECIMAL(20,10),
     MODIFY Built_up_Land DECIMAL(20,10),
-    MODIFY Carbon BIGINT,
-    MODIFY Total BIGINT,
+    MODIFY Carbon DOUBLE,
+    MODIFY Total DOUBLE,
     ADD PRIMARY KEY (ISO_3, Years, Record)
 ;"""
+
+# MODIFY Carbon BIGINT UNSIGNED,
+# MODIFY Total BIGINT UNSIGNED,
 
 cursor.execute(sql_command)
 cursor.execute(sql_table_1)
@@ -92,3 +94,4 @@ cursor.execute(sql_constraint_3)
 # never forget this, if you want the changes to be saved:
 connection.commit()
 connection.close()
+
