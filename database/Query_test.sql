@@ -3,6 +3,12 @@ SELECT * FROM Economy_info;
 SELECT * FROM Bilan_Footprint;
 SELECT * FROM National_Footprint;
 
+-- DROP TABLE Country_index;
+-- DROP TABLE Economy_info;
+-- DROP TABLE Bilan_Footprint;
+-- DROP TABLE National_Footprint;
+
+
 USE footprint;
 
 -- Evolution of World Carbon Footprint: Global Carbon Ecological Footprint of Consumption (in Billion GHA)
@@ -72,13 +78,13 @@ SELECT (100 *
 FROM Country_index AS C
 INNER JOIN National_Footprint AS N 
 ON N.ISO_3 = C.ISO_3
-WHERE  N.Record = 'EFConsTotGHA' AND N.Years = '1970' AND C.Country = 'France')
+WHERE  N.Record = 'EFConsTotGHA' AND N.Years = 1970 AND C.Country = 'France')
 /
 (SELECT Total
 FROM Country_index AS C
 INNER JOIN National_Footprint AS N 
 ON N.ISO_3 = C.ISO_3
-WHERE  N.Record = 'EFConsTotGHA' AND N.Years = '1970' AND C.Country = 'World') 
+WHERE  N.Record = 'EFConsTotGHA' AND N.Years = 1970 AND C.Country = 'World') 
 )As PercentDiff;
 
 -- France vs World in 2014
@@ -87,13 +93,13 @@ SELECT (100 *
 FROM Country_index AS C
 INNER JOIN National_Footprint AS N 
 ON N.ISO_3 = C.ISO_3
-WHERE  N.Record = 'EFConsTotGHA' AND N.Years = '2014' AND C.Country = 'France')
+WHERE  N.Record = 'EFConsTotGHA' AND N.Years = 2014 AND C.Country = 'France')
 /
 (SELECT Total
 FROM Country_index AS C
 INNER JOIN National_Footprint AS N 
 ON N.ISO_3 = C.ISO_3
-WHERE  N.Record = 'EFConsTotGHA' AND N.Years = '2014' AND C.Country = 'World') 
+WHERE  N.Record = 'EFConsTotGHA' AND N.Years = 2014 AND C.Country = 'World') 
 )As PercentDiff;
 
 -- Position de la France vis à vis des autres: 
@@ -103,10 +109,8 @@ FROM Country_index AS C
 INNER JOIN National_Footprint AS N
 ON N.ISO_3 = C.ISO_3
 WHERE N.Record = 'EFConsTotGHA'
-AND N.Years = '2014' 
-AND C.Country != 'World'
-ORDER BY N.Total DESC
-;
+AND N.Years = 2014 
+ORDER BY N.Total DESC;
 -- LIMIT 10;
 
 -- Quels pays se classent au premier rang en termes d'empreintes écologiques et de biocapacités totales?
@@ -116,8 +120,7 @@ FROM Country_index AS C
 INNER JOIN National_Footprint AS N
 ON N.ISO_3 = C.ISO_3
 WHERE N.Record = 'EFConsTotGHA'
-AND N.Years = '2014' 
-AND C.Country != 'World'
+AND N.Years = 2014 
 ORDER BY N.Total ASC;
 
 
@@ -154,6 +157,6 @@ ORDER BY Biocapacity_Deficit_or_Reserve DESC;
 
 SELECT Biocapacity_Deficit_or_Reserve, COUNT(Biocapacity_Deficit_or_Reserve)
 FROM Bilan_Footprint
-WHERE Biocapacity_Deficit_or_Reserve > '-2'
+WHERE Biocapacity_Deficit_or_Reserve > -2
 GROUP BY Biocapacity_Deficit_or_Reserve
 ORDER BY Biocapacity_Deficit_or_Reserve DESC;
